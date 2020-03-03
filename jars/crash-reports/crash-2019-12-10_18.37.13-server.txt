@@ -1,0 +1,61 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 12/10/19 6:37 PM
+Description: Exception ticking world
+
+java.lang.NullPointerException
+	at net.minecraft.src.ChunkProviderServer.unloadQueuedChunks(ChunkProviderServer.java:293)
+	at net.minecraft.src.WorldServer.tick(WorldServer.java:139)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:629)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:563)
+	at net.minecraft.src.IntegratedServer.tick(IntegratedServer.java:179)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:473)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.src.ChunkProviderServer.unloadQueuedChunks(ChunkProviderServer.java:293)
+	at net.minecraft.src.WorldServer.tick(WorldServer.java:139)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 699 Drop: 214
+	Level seed: -483068787470675099
+	Level generator: ID 12 - Beta, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (220,64,244), Chunk: (at 12,4,4 in 13,15; contains blocks 208,0,240 to 223,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 122441 game time, 4839 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 16744 (now: true), thunder time: 12081 (now: true)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:629)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:563)
+	at net.minecraft.src.IntegratedServer.tick(IntegratedServer.java:179)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:473)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.1.7
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_191, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 799105128 bytes (762 MB) / 1029177344 bytes (981 MB) up to 1029177344 bytes (981 MB)
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	AABB Pool Size: 545 (30520 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: Start, ModLoader, EntityRendererProxy[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.VersionWriter, SkinGetter], [org.apache.commons.io.IOUtils], [org.apache.commons.io.output.StringBuilderWriter, ByteArrayOutputStream], [org.json.simple.parser.ParseException]
+	IntCache: cache: 8, tcache: 2, allocated: 4, tallocated: 60
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 1246 (69776 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

@@ -1,0 +1,5 @@
+src\minecraft\net\minecraft\util\SkinGetter.java:21: error: multi-catch statement is not supported in -source 1.6
+	        } catch (IOException | ParseException e) {
+	                             ^
+  (use -source 7 or higher to enable multi-catch statement)
+1 error

@@ -1,0 +1,13 @@
+{
+  "user":{
+    "name":"Enb2i",
+    "sessionid":"local"
+  },
+  "stats-change":[
+    {"1004":1},
+    {"1000":1},
+    {"1100":53},
+    {"1003":1}
+  ],
+  "checksum":"145a5a03d2542d5e62c3c685471dff22"
+}

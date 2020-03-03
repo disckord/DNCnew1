@@ -1,0 +1,84 @@
+---- Minecraft Crash Report ----
+// On the bright side, I bought you a teddy bear!
+
+Time: 3/4/19 7:55 PM
+Description: Updating screen events
+
+java.lang.ClassCastException: net.minecraft.src.ItemPickaxe cannot be cast to net.minecraft.src.ItemSword
+	at net.minecraft.src.TileEntityFurnace.getItemBurnTime(TileEntityFurnace.java:325)
+	at net.minecraft.src.TileEntityFurnace.isItemFuel(TileEntityFurnace.java:343)
+	at net.minecraft.src.ContainerFurnace.transferStackInSlot(ContainerFurnace.java:126)
+	at net.minecraft.src.Container.slotClick(Container.java:273)
+	at net.minecraft.src.PlayerControllerMP.windowClick(PlayerControllerMP.java:424)
+	at net.minecraft.src.GuiContainer.handleMouseClick(GuiContainer.java:775)
+	at net.minecraft.src.GuiContainer.mouseClicked(GuiContainer.java:518)
+	at net.minecraft.src.GuiScreen.handleMouseInput(GuiScreen.java:198)
+	at net.minecraft.src.GuiScreen.handleInput(GuiScreen.java:172)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1485)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:828)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:753)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.src.TileEntityFurnace.getItemBurnTime(TileEntityFurnace.java:325)
+	at net.minecraft.src.TileEntityFurnace.isItemFuel(TileEntityFurnace.java:343)
+	at net.minecraft.src.ContainerFurnace.transferStackInSlot(ContainerFurnace.java:126)
+	at net.minecraft.src.Container.slotClick(Container.java:273)
+	at net.minecraft.src.PlayerControllerMP.windowClick(PlayerControllerMP.java:424)
+	at net.minecraft.src.GuiContainer.handleMouseClick(GuiContainer.java:775)
+	at net.minecraft.src.GuiContainer.mouseClicked(GuiContainer.java:518)
+	at net.minecraft.src.GuiScreen.handleMouseInput(GuiScreen.java:198)
+	at net.minecraft.src.GuiScreen.handleInput(GuiScreen.java:172)
+
+-- Affected screen --
+Details:
+	Screen name: net.minecraft.src.GuiFurnace
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player737'/114, l='MpServer', x=-145.65, y=57.62, z=-779.02]]
+	Chunk stats: MultiplayerChunkCache: 441
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-134,4,-765), Chunk: (at 10,0,3 in -9,-48; contains blocks -144,0,-768 to -129,255,-753), Region: (-1,-2; contains chunks -32,-64 to -1,-33, blocks -512,0,-1024 to -1,255,-513)
+	Level time: 251236 game time, 18742 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 62 total; [EntitySpider['Spider'/9, l='MpServer', x=-219.50, y=56.00, z=-855.78], EntityZombie['Zombie'/2958, l='MpServer', x=-92.50, y=56.00, z=-742.50], EntityZombie['Zombie'/2961, l='MpServer', x=-98.50, y=56.00, z=-746.50], EntitySkeleton['Skeleton'/20, l='MpServer', x=-178.13, y=56.00, z=-840.44], EntityZombie['Zombie'/23, l='MpServer', x=-182.31, y=56.00, z=-794.09], EntityCreeper['Creeper'/2967, l='MpServer', x=-96.50, y=56.00, z=-740.50], EntityCreeper['Creeper'/1304, l='MpServer', x=-83.88, y=56.00, z=-743.72], EntitySpider['Spider'/2970, l='MpServer', x=-224.50, y=56.00, z=-784.50], EntitySpider['Spider'/1307, l='MpServer', x=-89.97, y=56.00, z=-755.81], EntityBat['Bat'/29, l='MpServer', x=-171.78, y=57.10, z=-755.69], EntityBat['Bat'/30, l='MpServer', x=-166.44, y=57.10, z=-756.66], EntityCreeper['Creeper'/32, l='MpServer', x=-181.53, y=56.00, z=-771.94], EntitySkeleton['Skeleton'/35, l='MpServer', x=-161.91, y=56.00, z=-723.44], EntityCreeper['Creeper'/2979, l='MpServer', x=-220.50, y=56.00, z=-783.50], EntityZombie['Zombie'/40, l='MpServer', x=-162.06, y=56.00, z=-801.53], EntityItem['item.item.string'/41, l='MpServer', x=-151.66, y=59.13, z=-763.88], EntityBat['Bat'/42, l='MpServer', x=-156.63, y=57.10, z=-753.41], EntitySkeleton['Skeleton'/44, l='MpServer', x=-151.44, y=56.00, z=-726.78], EntitySkeleton['Skeleton'/46, l='MpServer', x=-148.28, y=56.00, z=-758.28], EntitySpider['Spider'/49, l='MpServer', x=-130.34, y=56.00, z=-839.25], EntitySkeleton['Skeleton'/51, l='MpServer', x=-142.41, y=56.00, z=-811.84], EntityZombie['Zombie'/52, l='MpServer', x=-129.74, y=56.00, z=-793.47], EntityPainting['Painting'/53, l='MpServer', x=-143.06, y=57.00, z=-780.00], EntityItem['item.item.string'/54, l='MpServer', x=-136.44, y=56.13, z=-759.19], EntityItem['item.item.string'/55, l='MpServer', x=-137.41, y=56.13, z=-758.34], EntityItem['item.item.string'/56, l='MpServer', x=-135.41, y=56.13, z=-757.34], EntityCreeper['Creeper'/58, l='MpServer', x=-144.38, y=56.00, z=-769.06], EntitySkeleton['Skeleton'/1466, l='MpServer', x=-78.72, y=56.00, z=-742.22], EntityZombie['Zombie'/60, l='MpServer', x=-144.25, y=56.00, z=-773.13], EntityCreeper['Creeper'/61, l='MpServer', x=-155.94, y=56.00, z=-763.41], EntitySkeleton['Skeleton'/1469, l='MpServer', x=-93.13, y=56.00, z=-738.31], EntitySkeleton['Skeleton'/1991, l='MpServer', x=-104.94, y=51.00, z=-751.47], EntityItem['item.item.sulphur'/72, l='MpServer', x=-132.34, y=54.13, z=-744.59], EntityItem['item.item.sulphur'/73, l='MpServer', x=-134.50, y=56.13, z=-742.66], EntityCreeper['Creeper'/1994, l='MpServer', x=-108.75, y=56.00, z=-776.06], EntityZombie['Zombie'/76, l='MpServer', x=-134.69, y=54.00, z=-749.84], EntityCreeper['Creeper'/1996, l='MpServer', x=-115.50, y=56.00, z=-766.50], EntityZombie['Zombie'/2509, l='MpServer', x=-82.89, y=56.00, z=-805.63], EntityCreeper['Creeper'/1358, l='MpServer', x=-164.97, y=56.00, z=-754.50], EntityZombie['Zombie'/1361, l='MpServer', x=-171.95, y=56.00, z=-754.59], EntitySkeleton['Skeleton'/1490, l='MpServer', x=-136.69, y=56.00, z=-749.59], EntityCreeper['Creeper'/2515, l='MpServer', x=-95.03, y=56.00, z=-813.44], EntityZombie['Zombie'/2647, l='MpServer', x=-193.50, y=56.00, z=-855.50], EntityZombie['Zombie'/88, l='MpServer', x=-118.41, y=56.00, z=-796.13], EntityCreeper['Creeper'/90, l='MpServer', x=-129.34, y=53.00, z=-744.50], EntityZombie['Zombie'/91, l='MpServer', x=-119.66, y=49.00, z=-746.50], EntitySpider['Spider'/2652, l='MpServer', x=-197.00, y=56.00, z=-850.47], EntityZombie['Zombie'/96, l='MpServer', x=-101.24, y=56.00, z=-802.93], EntitySpider['Spider'/2400, l='MpServer', x=-81.31, y=56.00, z=-808.29], EntityEnderman['Enderman'/99, l='MpServer', x=-114.34, y=56.00, z=-762.00], EntitySkeleton['Skeleton'/1767, l='MpServer', x=-178.22, y=56.00, z=-809.31], EntityEnderman['Enderman'/104, l='MpServer', x=-70.22, y=56.00, z=-762.72], EntityEnderman['Enderman'/106, l='MpServer', x=-90.72, y=56.00, z=-808.16], EntitySkeleton['Skeleton'/108, l='MpServer', x=-84.09, y=56.00, z=-803.28], EntityZombie['Zombie'/1775, l='MpServer', x=-179.47, y=56.00, z=-805.06], EntitySpider['Spider'/1650, l='MpServer', x=-219.36, y=56.00, z=-772.38], EntityZombie['Zombie'/1778, l='MpServer', x=-174.06, y=56.00, z=-793.59], EntityZombie['Zombie'/2418, l='MpServer', x=-208.84, y=56.00, z=-799.31], EntityClientPlayerMP['Player737'/114, l='MpServer', x=-145.65, y=57.62, z=-779.02], EntityPainting['Painting'/53, l='MpServer', x=-143.06, y=57.00, z=-780.00], EntitySpider['Spider'/1652, l='MpServer', x=-214.28, y=56.00, z=-767.25], EntitySpider['Spider'/1654, l='MpServer', x=-222.27, y=56.00, z=-767.52]]
+	Retry entities: 0 total; []
+Stacktrace:
+	at net.minecraft.src.WorldClient.addWorldInfoToCrashReport(WorldClient.java:405)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2446)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:769)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.0.2
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_201, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 655185768 bytes (624 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 1028 (57568 bytes; 0 MB) allocated, 2 (112 bytes; 0 MB) used
+	Suspicious classes: Start[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	ModLoader: Mods loaded: 1
+ModLoader DNC v 1.0.2
+
+	LWJGL: 2.4.2
+	OpenGL: GeForce GTX 1080/PCIe/SSE2 GL version 4.6.0 NVIDIA 416.94, NVIDIA Corporation
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Texture Pack: Default
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 173 (9688 bytes; 0 MB) allocated, 21 (1176 bytes; 0 MB) used

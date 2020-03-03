@@ -1,0 +1,71 @@
+---- Minecraft Crash Report ----
+// This is a token for 1 free hug. Redeem at your nearest Mojangsta: [~~HUG~~]
+
+Time: 1/11/20 5:16 PM
+Description: Unexpected error
+
+java.lang.NullPointerException
+	at net.minecraft.src.DataWatcher.updateObject(DataWatcher.java:135)
+	at net.minecraft.src.EntityArrow.setArrowType(EntityArrow.java:172)
+	at net.minecraft.src.ItemBow.onItemRightClick(ItemBow.java:41)
+	at net.minecraft.src.ItemStack.useItemRightClick(ItemStack.java:193)
+	at net.minecraft.src.PlayerControllerMP.sendUseItem(PlayerControllerMP.java:381)
+	at net.minecraft.client.Minecraft.clickMouse(Minecraft.java:1258)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1711)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:754)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:677)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.src.DataWatcher.updateObject(DataWatcher.java:135)
+	at net.minecraft.src.EntityArrow.setArrowType(EntityArrow.java:172)
+	at net.minecraft.src.ItemBow.onItemRightClick(ItemBow.java:41)
+	at net.minecraft.src.ItemStack.useItemRightClick(ItemStack.java:193)
+	at net.minecraft.src.PlayerControllerMP.sendUseItem(PlayerControllerMP.java:381)
+	at net.minecraft.client.Minecraft.clickMouse(Minecraft.java:1258)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['disckord'/58, l='MpServer', x=-134.25, y=75.62, z=227.26]]
+	Chunk stats: MultiplayerChunkCache: 170
+	Level seed: 0
+	Level generator: ID 14 - Alpha, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-132,64,180), Chunk: (at 12,4,4 in -9,11; contains blocks -144,0,176 to -129,255,191), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 1596 game time, 1596 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 15 total; [EntitySheep['Sheep'/32, l='MpServer', x=-126.91, y=70.00, z=301.19], EntitySheep['Sheep'/33, l='MpServer', x=-112.22, y=70.00, z=290.11], EntitySquid['Squid'/39, l='MpServer', x=-87.75, y=60.25, z=205.55], EntitySquid['Squid'/41, l='MpServer', x=-77.57, y=60.70, z=204.72], EntityPig['Pig'/16, l='MpServer', x=-204.34, y=63.00, z=294.91], EntityPig['Pig'/19, l='MpServer', x=-189.06, y=73.00, z=244.59], EntityPig['Pig'/20, l='MpServer', x=-177.83, y=72.00, z=249.38], EntityItem['item.tile.gravel'/21, l='MpServer', x=-168.28, y=26.13, z=193.13], EntityPig['Pig'/25, l='MpServer', x=-145.09, y=80.00, z=287.09], EntityArrow['arrow'/26, l='MpServer', x=-135.00, y=74.03, z=235.97], EntityArrow['arrow'/27, l='MpServer', x=-135.00, y=74.06, z=236.00], EntityArrow['arrow'/28, l='MpServer', x=-135.00, y=73.66, z=236.66], EntityClientPlayerMP['disckord'/58, l='MpServer', x=-134.25, y=75.62, z=227.26], EntityArrow['arrow'/29, l='MpServer', x=-135.00, y=71.44, z=241.50], EntityArrow['arrow'/30, l='MpServer', x=-135.00, y=71.00, z=242.13]]
+	Retry entities: 0 total; []
+Stacktrace:
+	at net.minecraft.src.WorldClient.addWorldInfoToCrashReport(WorldClient.java:405)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2374)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:700)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.2.0
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_231, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 868860672 bytes (828 MB) / 1029177344 bytes (981 MB) up to 1029177344 bytes (981 MB)
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	AABB Pool Size: 1590 (89040 bytes; 0 MB) allocated, 2 (112 bytes; 0 MB) used
+	Suspicious classes: Start[net.lingala.zip4j.exception.ZipException], [net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.VersionWriter, SkinGetter, PerkGetter], [org.apache.commons.io.IOUtils, Charsets], [org.apache.commons.io.output.StringBuilderWriter, ByteArrayOutputStream], [org.json.simple.JSONValue, JSONAware, JSONStreamAware, ...], [org.json.simple.parser.ParseException, JSONParser, Yylex, ...]
+	IntCache: cache: 0, tcache: 11, allocated: 14, tallocated: 50
+	LWJGL: 2.4.2
+	OpenGL: GeForce GTX 1080/PCIe/SSE2 GL version 4.6.0 NVIDIA 441.41, NVIDIA Corporation
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Texture Pack: Default
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 2110 (118160 bytes; 0 MB) allocated, 15 (840 bytes; 0 MB) used

@@ -1,0 +1,109 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 10/5/19 1:23 PM
+Description: Exception preparing structure feature
+
+java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Unknown Source)
+	at net.minecraft.src.MapGenVillage.canSpawnStructureAtCoords(MapGenVillage.java:87)
+	at net.minecraft.src.MapGenStructure.recursiveGenerate(MapGenStructure.java:29)
+	at net.minecraft.src.MapGenBase.generate(MapGenBase.java:29)
+	at net.minecraft.src.ChunkProviderFlat.provideChunk(ChunkProviderFlat.java:138)
+	at net.minecraft.src.ChunkProviderServer.loadChunk(ChunkProviderServer.java:106)
+	at net.minecraft.src.ChunkProviderServer.provideChunk(ChunkProviderServer.java:141)
+	at net.minecraft.src.World.getChunkFromChunkCoords(World.java:420)
+	at net.minecraft.src.World.getBlockId(World.java:307)
+	at net.minecraft.src.World.isAirBlock(World.java:331)
+	at net.minecraft.src.World.getFirstUncoveredBlock(World.java:278)
+	at net.minecraft.src.WorldProvider.canCoordinateBeSpawn(WorldProvider.java:314)
+	at net.minecraft.src.WorldServer.createSpawnPosition(WorldServer.java:754)
+	at net.minecraft.src.WorldServer.initialize(WorldServer.java:715)
+	at net.minecraft.src.World.<init>(World.java:214)
+	at net.minecraft.src.WorldServer.<init>(WorldServer.java:49)
+	at net.minecraft.src.WorldServerOF.<init>(WorldServerOF.java:18)
+	at net.minecraft.src.IntegratedServer.loadAllWorlds(IntegratedServer.java:102)
+	at net.minecraft.src.IntegratedServer.startServer(IntegratedServer.java:144)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:438)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.Random.nextInt(Unknown Source)
+	at net.minecraft.src.MapGenVillage.canSpawnStructureAtCoords(MapGenVillage.java:87)
+
+-- Feature being prepared --
+Details:
+	Is feature chunk: ~~ERROR~~ IllegalArgumentException: bound must be positive
+	Chunk location: -8,-8
+	Chunk pos hash: -30064771080
+	Structure type: net.minecraft.src.MapGenVillage
+Stacktrace:
+	at net.minecraft.src.MapGenStructure.recursiveGenerate(MapGenStructure.java:29)
+	at net.minecraft.src.MapGenBase.generate(MapGenBase.java:29)
+	at net.minecraft.src.ChunkProviderFlat.provideChunk(ChunkProviderFlat.java:138)
+
+-- Chunk to be generated --
+Details:
+	Location: 0,0
+	Position hash: 0
+	Generator: FlatLevelSource
+Stacktrace:
+	at net.minecraft.src.ChunkProviderServer.loadChunk(ChunkProviderServer.java:106)
+	at net.minecraft.src.ChunkProviderServer.provideChunk(ChunkProviderServer.java:141)
+	at net.minecraft.src.World.getChunkFromChunkCoords(World.java:420)
+
+-- Requested block coordinates --
+Details:
+	Found chunk: true
+	Location: World: (0,64,0), Chunk: (at 0,4,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+Stacktrace:
+	at net.minecraft.src.World.getBlockId(World.java:307)
+	at net.minecraft.src.World.isAirBlock(World.java:331)
+	at net.minecraft.src.World.getFirstUncoveredBlock(World.java:278)
+	at net.minecraft.src.WorldProvider.canCoordinateBeSpawn(WorldProvider.java:314)
+	at net.minecraft.src.WorldServer.createSpawnPosition(WorldServer.java:754)
+	at net.minecraft.src.WorldServer.initialize(WorldServer.java:715)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 0 Drop: 0
+	Level seed: -2715768059112737073
+	Level generator: ID 01 - flat, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (0,0,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 0 game time, 0 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.src.World.<init>(World.java:214)
+	at net.minecraft.src.WorldServer.<init>(WorldServer.java:49)
+	at net.minecraft.src.WorldServerOF.<init>(WorldServerOF.java:18)
+	at net.minecraft.src.IntegratedServer.loadAllWorlds(IntegratedServer.java:102)
+	at net.minecraft.src.IntegratedServer.startServer(IntegratedServer.java:144)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:438)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.1.5d
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 986456968 bytes (940 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: Start, ModLoader, EntityRendererProxy[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.VersionWriter]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

@@ -1,0 +1,14 @@
+{
+  "user":{
+    "name":"disckord2",
+    "sessionid":"local"
+  },
+  "stats-change":[
+    {"2010":1},
+    {"1004":1},
+    {"1100":455},
+    {"1003":1},
+    {"2004":3852}
+  ],
+  "checksum":"dc8f18cf6572461b34f738a0608c5db"
+}

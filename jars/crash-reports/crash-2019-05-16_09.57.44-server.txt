@@ -1,0 +1,39 @@
+---- Minecraft Crash Report ----
+// I feel sad now :(
+
+Time: 5/16/19 9:57 AM
+Description: Exception in server tick loop
+
+java.lang.ArrayIndexOutOfBoundsException: -6
+	at net.minecraft.src.CrashReport.makeCategoryDepth(CrashReport.java:250)
+	at net.minecraft.src.CrashReport.makeCategory(CrashReport.java:231)
+	at net.minecraft.src.ChunkProviderServer.loadChunk(ChunkProviderServer.java:111)
+	at net.minecraft.server.MinecraftServer.initialWorldChunkLoad(MinecraftServer.java:294)
+	at net.minecraft.src.IntegratedServer.loadAllWorlds(IntegratedServer.java:87)
+	at net.minecraft.src.IntegratedServer.startServer(IntegratedServer.java:103)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:435)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.0.2
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_201, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 966579336 bytes (921 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: Start[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	ModLoader: Mods loaded: 1
+ModLoader DNC v 1.0.2
+
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

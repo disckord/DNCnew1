@@ -1,0 +1,42 @@
+---- Minecraft Crash Report ----
+// Sorry :(
+
+Time: 9/28/19 11:49 AM
+Description: Ticking memory connection
+
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.fastRemove(Unknown Source)
+	at java.util.ArrayList.remove(Unknown Source)
+	at net.minecraft.src.World.removeEntity(World.java:1487)
+	at net.minecraft.src.ServerConfigurationManager.playerLoggedOut(ServerConfigurationManager.java:248)
+	at net.minecraft.src.NetServerHandler.handleErrorMessage(NetServerHandler.java:530)
+	at net.minecraft.src.MemoryConnection.processReadPackets(MemoryConnection.java:84)
+	at net.minecraft.src.NetServerHandler.networkTick(NetServerHandler.java:70)
+	at net.minecraft.src.NetworkListenThread.networkTick(NetworkListenThread.java:48)
+	at net.minecraft.src.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:99)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:660)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:563)
+	at net.minecraft.src.IntegratedServer.tick(IntegratedServer.java:179)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:473)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.1.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 844194472 bytes (805 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 1362 (76272 bytes; 0 MB) allocated, 1199 (67144 bytes; 0 MB) used
+	Suspicious classes: Start, ModLoader, EntityRendererProxy[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.VersionWriter, SkinGetter], [org.apache.commons.io.IOUtils, Charsets], [org.apache.commons.io.output.StringBuilderWriter, ByteArrayOutputStream], [org.json.simple.JSONValue, JSONAware, JSONStreamAware, ...], [org.json.simple.parser.ParseException, JSONParser, Yylex, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 3857 (215992 bytes; 0 MB) allocated, 3405 (190680 bytes; 0 MB) used
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

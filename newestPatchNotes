@@ -1,0 +1,47 @@
+#########################################
+Disckords Nostalgia Client version 1.1.6.
+
+Added:
+-Mossy Cobblestone Stairs.
+-Rotting Wood planks.
+-Rotting Wood stairs.
+
+Changed:
+-Village generation.
+-Structures will now contain mossy cobble and new rotten wood.
+#########################################
+
+
+
+
+#########################################
+Disckords Nostalgia Client version 1.1.5.
+
+Fixes:
+-Fixed jukeboxes not playing music.
+-Fixed some server side crashes.
+-Made bows work like bows in Beta 1.7.3.
+-Reverted lighting to match minecraft beta 1.7.3.
+-Holding jump now makes you bunny hop like in beta 1.7.3.
+
+Added:
+-1.5.2 shader support.
+-Alpha textures option.
+-Alpha foliage color option.
+-Old chests option.
+-Clear glass option.
+-Lava exposed to rain now makes fizz noises randomly.
+-Fire exposed to rain now makes fizz noises randomly.
+
+
+(1.1.5a)
+-fixed water hot streams steam particles not showing.
+-added origional minecraft beta music.
+
+(1.1.5b)
+-Made dropped cacti large like in older versions of minecraft.
+-fixed cauldron and water steaming properties.
+
+(1.1.5c)
+-fixed redstone wire not rendering properly.
+############################################

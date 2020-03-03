@@ -1,0 +1,67 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 10/7/19 4:20 PM
+Description: Exception ticking world
+
+java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Unknown Source)
+	at net.minecraft.src.World.setActivePlayerChunksAndCheckLight(World.java:3010)
+	at net.minecraft.src.World.tickBlocksAndAmbiance(World.java:3058)
+	at net.minecraft.src.WorldServer.tickBlocksAndAmbiance(WorldServer.java:279)
+	at net.minecraft.src.WorldServer.tick(WorldServer.java:152)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:629)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:563)
+	at net.minecraft.src.IntegratedServer.tick(IntegratedServer.java:179)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:473)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.Random.nextInt(Unknown Source)
+	at net.minecraft.src.World.setActivePlayerChunksAndCheckLight(World.java:3010)
+	at net.minecraft.src.World.tickBlocksAndAmbiance(World.java:3058)
+	at net.minecraft.src.WorldServer.tickBlocksAndAmbiance(WorldServer.java:279)
+	at net.minecraft.src.WorldServer.tick(WorldServer.java:152)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 0 total; []
+	Chunk stats: ServerChunkCache: 625 Drop: 0
+	Level seed: -6883506301386492781
+	Level generator: ID 12 - Beta, ver 0. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (88,64,252), Chunk: (at 8,4,12 in 5,15; contains blocks 80,0,240 to 95,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1 game time, 1 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 115395 (now: false), thunder time: 158527 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:629)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:563)
+	at net.minecraft.src.IntegratedServer.tick(IntegratedServer.java:179)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:473)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.1.5d
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 817885872 bytes (779 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: Start, ModLoader, EntityRendererProxy[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.VersionWriter]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

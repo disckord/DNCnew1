@@ -1,0 +1,77 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 9/28/19 5:58 PM
+Description: Unexpected error
+
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at net.minecraft.src.Tessellator.draw(Tessellator.java:327)
+	at net.minecraft.src.TexturedQuad.draw(TexturedQuad.java:62)
+	at net.minecraft.src.ModelBox.render(ModelBox.java:98)
+	at net.minecraft.src.ModelRenderer.compileDisplayList(ModelRenderer.java:292)
+	at net.minecraft.src.ModelRenderer.render(ModelRenderer.java:128)
+	at net.minecraft.src.RenderPlayer.renderFirstPersonArm(RenderPlayer.java:407)
+	at net.minecraft.src.ItemRenderer.renderItemInFirstPerson(ItemRenderer.java:474)
+	at net.minecraft.src.EntityRenderer.renderHand(EntityRenderer.java:749)
+	at net.minecraft.src.EntityRenderer.renderWorld(EntityRenderer.java:1566)
+	at net.minecraft.src.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1029)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:786)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:674)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.src.Tessellator.draw(Tessellator.java:327)
+	at net.minecraft.src.TexturedQuad.draw(TexturedQuad.java:62)
+	at net.minecraft.src.ModelBox.render(ModelBox.java:98)
+	at net.minecraft.src.ModelRenderer.compileDisplayList(ModelRenderer.java:292)
+	at net.minecraft.src.ModelRenderer.render(ModelRenderer.java:128)
+	at net.minecraft.src.RenderPlayer.renderFirstPersonArm(RenderPlayer.java:407)
+	at net.minecraft.src.ItemRenderer.renderItemInFirstPerson(ItemRenderer.java:474)
+	at net.minecraft.src.EntityRenderer.renderHand(EntityRenderer.java:749)
+	at net.minecraft.src.EntityRenderer.renderWorld(EntityRenderer.java:1566)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['disckord'/167, l='MpServer', x=9.64, y=79.62, z=8.77]]
+	Chunk stats: MultiplayerChunkCache: 85
+	Level seed: 0
+	Level generator: ID 12 - Beta, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (0,64,0), Chunk: (at 0,4,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 3567 game time, 3567 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 51 total; [EntityItem['item.tile.sapling.oak'/38, l='MpServer', x=-39.13, y=72.13, z=57.13], EntityItem['item.tile.sapling.oak'/39, l='MpServer', x=-33.84, y=79.13, z=56.13], EntityClientPlayerMP['disckord'/167, l='MpServer', x=9.64, y=79.62, z=8.77], EntityItem['item.tile.sapling.oak'/40, l='MpServer', x=-33.22, y=72.13, z=61.13], EntityItem['item.tile.sapling.oak'/41, l='MpServer', x=-35.09, y=82.13, z=59.88], EntitySheep['Sheep'/45, l='MpServer', x=-28.84, y=73.00, z=54.66], EntityPig['Pig'/47, l='MpServer', x=-2.69, y=79.00, z=-0.50], EntityPig['Pig'/48, l='MpServer', x=-2.13, y=77.00, z=6.59], EntityPig['Pig'/49, l='MpServer', x=-3.97, y=76.00, z=49.03], EntityItem['item.tile.sapling.oak'/50, l='MpServer', x=5.09, y=72.13, z=-4.13], EntityItem['item.tile.flower'/51, l='MpServer', x=5.91, y=72.13, z=-2.38], EntityItem['item.tile.sapling.oak'/52, l='MpServer', x=7.81, y=72.13, z=-3.94], EntityItem['item.item.apple'/53, l='MpServer', x=11.44, y=81.13, z=-2.31], EntityItem['item.tile.sapling.oak'/54, l='MpServer', x=14.13, y=81.13, z=-5.50], EntityItem['item.tile.sapling.oak'/55, l='MpServer', x=13.66, y=81.13, z=-8.31], EntityItem['item.tile.sapling.oak'/56, l='MpServer', x=6.59, y=85.13, z=-9.88], EntityItem['item.tile.sapling.oak'/57, l='MpServer', x=7.13, y=85.13, z=-12.72], EntityItem['item.tile.sapling.oak'/58, l='MpServer', x=13.69, y=79.13, z=4.13], EntityItem['item.tile.sapling.oak'/59, l='MpServer', x=9.56, y=85.13, z=35.06], EntityItem['item.tile.sapling.oak'/60, l='MpServer', x=8.41, y=87.13, z=35.97], EntityItem['item.tile.sapling.oak'/61, l='MpServer', x=7.75, y=85.13, z=35.88], EntityItem['item.tile.sapling.oak'/62, l='MpServer', x=11.41, y=89.13, z=39.88], EntityItem['item.tile.sapling.oak'/63, l='MpServer', x=10.13, y=85.13, z=35.16], EntityItem['item.tile.sapling.oak'/64, l='MpServer', x=7.47, y=88.13, z=41.09], EntityItem['item.tile.sapling.oak'/65, l='MpServer', x=7.06, y=87.13, z=39.13], EntityItem['item.tile.sapling.oak'/66, l='MpServer', x=5.78, y=84.13, z=42.13], EntitySheep['Sheep'/67, l='MpServer', x=5.97, y=72.00, z=64.97], EntityItem['item.tile.sapling.oak'/69, l='MpServer', x=29.13, y=88.13, z=11.56], EntityItem['item.tile.sapling.oak'/70, l='MpServer', x=16.97, y=87.13, z=44.38], EntityItem['item.tile.sapling.oak'/71, l='MpServer', x=17.06, y=87.13, z=38.63], EntityItem['item.tile.sapling.oak'/72, l='MpServer', x=18.88, y=79.13, z=59.88], EntityItem['item.tile.sapling.oak'/73, l='MpServer', x=27.13, y=76.13, z=60.13], EntityItem['item.tile.sapling.oak'/74, l='MpServer', x=27.13, y=77.13, z=57.88], EntityItem['item.tile.sapling.oak'/75, l='MpServer', x=16.13, y=78.13, z=59.88], EntityItem['item.tile.mushroom'/78, l='MpServer', x=47.13, y=62.13, z=-30.13], EntityItem['item.tile.sapling.oak'/79, l='MpServer', x=36.88, y=90.13, z=-21.16], EntityItem['item.tile.sapling.oak'/80, l='MpServer', x=35.47, y=88.13, z=-20.88], EntityItem['item.tile.sapling.oak'/81, l='MpServer', x=36.22, y=86.13, z=-25.38], EntityItem['item.tile.sapling.oak'/82, l='MpServer', x=44.13, y=88.13, z=-21.03], EntityItem['item.tile.sapling.oak'/83, l='MpServer', x=39.59, y=90.13, z=-17.88], EntityItem['item.tile.sapling.oak'/84, l='MpServer', x=39.34, y=89.13, z=-16.88], EntityPig['Pig'/94, l='MpServer', x=57.66, y=92.00, z=-57.47], EntityItem['item.tile.mushroom'/95, l='MpServer', x=54.13, y=62.13, z=-35.88], EntityItem['item.tile.mushroom'/96, l='MpServer', x=50.13, y=62.13, z=-34.88], EntityItem['item.tile.sapling.oak'/97, l='MpServer', x=53.88, y=89.13, z=30.41], EntityItem['item.tile.sapling.oak'/98, l='MpServer', x=49.88, y=91.13, z=33.88], EntityItem['item.tile.sapling.oak'/99, l='MpServer', x=53.44, y=92.13, z=33.88], EntityItem['item.tile.sapling.oak'/100, l='MpServer', x=50.44, y=90.13, z=36.75], EntityItem['item.item.apple'/101, l='MpServer', x=59.88, y=90.13, z=72.88], EntitySheep['Sheep'/109, l='MpServer', x=67.09, y=88.00, z=-37.16], EntitySheep['Sheep'/110, l='MpServer', x=71.97, y=72.00, z=68.84]]
+	Retry entities: 0 total; []
+Stacktrace:
+	at net.minecraft.src.WorldClient.addWorldInfoToCrashReport(WorldClient.java:405)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2370)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:697)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.1.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 894904824 bytes (853 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 5 (280 bytes; 0 MB) allocated, 5 (280 bytes; 0 MB) used
+	Suspicious classes: Start, ModLoader, EntityRendererProxy[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.VersionWriter, SkinGetter], [org.apache.commons.io.IOUtils, Charsets], [org.apache.commons.io.output.StringBuilderWriter, ByteArrayOutputStream], [org.json.simple.JSONValue, JSONAware, JSONStreamAware, ...], [org.json.simple.parser.ParseException, JSONParser, Yylex, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	LWJGL: 2.4.2
+	OpenGL: GeForce GTX 1080/PCIe/SSE2 GL version 4.6.0 NVIDIA 436.30, NVIDIA Corporation
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Texture Pack: Default
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 308 (17248 bytes; 0 MB) allocated, 308 (17248 bytes; 0 MB) used

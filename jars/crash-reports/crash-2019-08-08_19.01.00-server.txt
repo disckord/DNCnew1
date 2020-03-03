@@ -1,0 +1,46 @@
+---- Minecraft Crash Report ----
+// Ouch. That hurt :(
+
+Time: 8/8/19 7:01 PM
+Description: Ticking memory connection
+
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at java.util.ArrayList.fastRemove(Unknown Source)
+	at java.util.ArrayList.remove(Unknown Source)
+	at net.minecraft.src.PlayerInstance.sendThisChunkToPlayer(PlayerInstance.java:49)
+	at net.minecraft.src.PlayerManager.removePlayer(PlayerManager.java:201)
+	at net.minecraft.src.ServerConfigurationManager.playerLoggedOut(ServerConfigurationManager.java:249)
+	at net.minecraft.src.NetServerHandler.handleErrorMessage(NetServerHandler.java:533)
+	at net.minecraft.src.MemoryConnection.processReadPackets(MemoryConnection.java:84)
+	at net.minecraft.src.NetServerHandler.networkTick(NetServerHandler.java:70)
+	at net.minecraft.src.NetworkListenThread.networkTick(NetworkListenThread.java:48)
+	at net.minecraft.src.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:99)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:657)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:560)
+	at net.minecraft.src.IntegratedServer.tick(IntegratedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:470)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.0.7
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 617623296 bytes (589 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 267 (14952 bytes; 0 MB) allocated, 226 (12656 bytes; 0 MB) used
+	Suspicious classes: Start[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.SkinGetter], [org.apache.commons.io.IOUtils, Charsets], [org.apache.commons.io.output.StringBuilderWriter, ByteArrayOutputStream], [org.json.simple.JSONValue, JSONAware, JSONStreamAware, ...], [org.json.simple.parser.ParseException, JSONParser, Yylex, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	ModLoader: Mods loaded: 1
+ModLoader DNC v 1.0.7
+
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 1360 (76160 bytes; 0 MB) allocated, 1268 (71008 bytes; 0 MB) used
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

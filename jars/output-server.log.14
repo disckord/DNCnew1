@@ -1,0 +1,22 @@
+2019-03-01 22:07:35 [SERVER] [INFO] Starting integrated minecraft server version DNC v beta_1.7
+2019-03-01 22:07:35 [SERVER] [INFO] Generating keypair
+2019-03-01 22:07:35 [SERVER] [INFO] Converting map!
+2019-03-01 22:07:35 [SERVER] [INFO] Scanning folders...
+2019-03-01 22:07:35 [SERVER] [INFO] Total conversion count is 0
+2019-03-01 22:07:36 [SERVER] [INFO] Preparing start region for level 0
+2019-03-01 22:07:37 [SERVER] [INFO] Preparing spawn area: 40%
+2019-03-01 22:07:38 [SERVER] [INFO] Preparing spawn area: 80%
+2019-03-01 22:07:38 [SERVER] [INFO] Player661[/127.0.0.1:0] logged in with entity id 84130 at (33.5, 75.0, -19.5)
+2019-03-01 22:07:43 [SERVER] [INFO] Saving and pausing game...
+2019-03-01 22:07:43 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2019-03-01 22:07:45 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2019-03-01 22:07:45 [SERVER] [INFO] Saving chunks for level 'New World'/The End
+2019-03-01 22:07:45 [SERVER] [INFO] Stopping server
+2019-03-01 22:07:45 [SERVER] [INFO] Saving players
+2019-03-01 22:07:45 [SERVER] [WARNING] Failed to save player data for Player661
+2019-03-01 22:07:45 [SERVER] [WARNING] Failed to save player data for Player661
+2019-03-01 22:07:45 [SERVER] [INFO] Saving worlds
+2019-03-01 22:07:45 [SERVER] [INFO] Saving chunks for level 'New World'/Overworld
+2019-03-01 22:07:45 [SERVER] [WARNING] Failed to check session lock, aborting
+2019-03-01 22:07:45 [SERVER] [INFO] Saving chunks for level 'New World'/Nether
+2019-03-01 22:07:45 [SERVER] [INFO] Saving chunks for level 'New World'/The End

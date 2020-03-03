@@ -1,0 +1,44 @@
+---- Minecraft Crash Report ----
+// This is a token for 1 free hug. Redeem at your nearest Mojangsta: [~~HUG~~]
+
+Time: 1/11/20 5:36 PM
+Description: Ticking memory connection
+
+java.lang.IllegalArgumentException: Duplicate id value for 13!
+	at net.minecraft.src.DataWatcher.addObject(DataWatcher.java:43)
+	at net.minecraft.src.EntityArrow.setArrowType(EntityArrow.java:192)
+	at net.minecraft.src.ItemBow.onItemRightClick(ItemBow.java:41)
+	at net.minecraft.src.ItemStack.useItemRightClick(ItemStack.java:193)
+	at net.minecraft.src.ItemInWorldManager.tryUseItem(ItemInWorldManager.java:293)
+	at net.minecraft.src.NetServerHandler.handlePlace(NetServerHandler.java:449)
+	at net.minecraft.src.Packet15Place.processPacket(Packet15Place.java:75)
+	at net.minecraft.src.MemoryConnection.processReadPackets(MemoryConnection.java:74)
+	at net.minecraft.src.NetServerHandler.networkTick(NetServerHandler.java:70)
+	at net.minecraft.src.NetworkListenThread.networkTick(NetworkListenThread.java:48)
+	at net.minecraft.src.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:99)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:660)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:563)
+	at net.minecraft.src.IntegratedServer.tick(IntegratedServer.java:179)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:473)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.2.0
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_231, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 865609808 bytes (825 MB) / 1029177344 bytes (981 MB) up to 1029177344 bytes (981 MB)
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	AABB Pool Size: 845 (47320 bytes; 0 MB) allocated, 593 (33208 bytes; 0 MB) used
+	Suspicious classes: Start[net.lingala.zip4j.exception.ZipException], [net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.VersionWriter, SkinGetter, PerkGetter], [org.apache.commons.io.IOUtils, Charsets], [org.apache.commons.io.output.StringBuilderWriter, ByteArrayOutputStream], [org.json.simple.JSONValue, JSONAware, JSONStreamAware, ...], [org.json.simple.parser.ParseException, JSONParser, Yylex, ...]
+	IntCache: cache: 0, tcache: 11, allocated: 14, tallocated: 50
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 588 (32928 bytes; 0 MB) allocated, 535 (29960 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['disckord'/59, l='New World', x=-132.94, y=74.00, z=226.47]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

@@ -1,0 +1,78 @@
+---- Minecraft Crash Report ----
+// Sorry :(
+
+Time: 5/6/19 12:17 PM
+Description: Unexpected error
+
+java.lang.IllegalArgumentException
+	at java.nio.Buffer.position(Unknown Source)
+	at net.minecraft.src.Tessellator.draw(Tessellator.java:227)
+	at net.minecraft.src.ItemRenderer.renderItemIn2D(ItemRenderer.java:133)
+	at net.minecraft.src.ItemRenderer.renderItem(ItemRenderer.java:83)
+	at net.minecraft.src.ItemRenderer.renderItemInFirstPerson(ItemRenderer.java:446)
+	at net.minecraft.src.EntityRenderer.renderHand(EntityRenderer.java:666)
+	at net.minecraft.src.EntityRenderer.renderWorld(EntityRenderer.java:1252)
+	at net.minecraft.src.EntityRenderer.updateCameraAndRender(EntityRenderer.java:990)
+	at net.minecraft.src.EntityRendererProxy.updateCameraAndRender(EntityRendererProxy.java:20)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:865)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:753)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.nio.Buffer.position(Unknown Source)
+	at net.minecraft.src.Tessellator.draw(Tessellator.java:227)
+	at net.minecraft.src.ItemRenderer.renderItemIn2D(ItemRenderer.java:133)
+	at net.minecraft.src.ItemRenderer.renderItem(ItemRenderer.java:83)
+	at net.minecraft.src.ItemRenderer.renderItemInFirstPerson(ItemRenderer.java:446)
+	at net.minecraft.src.EntityRenderer.renderHand(EntityRenderer.java:666)
+	at net.minecraft.src.EntityRenderer.renderWorld(EntityRenderer.java:1252)
+	at net.minecraft.src.EntityRenderer.updateCameraAndRender(EntityRenderer.java:990)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player586'/1, l='MpServer', x=-4775.17, y=57.62, z=6427.87]]
+	Chunk stats: MultiplayerChunkCache: 441
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-134,4,-765), Chunk: (at 10,0,3 in -9,-48; contains blocks -144,0,-768 to -129,255,-753), Region: (-1,-2; contains chunks -32,-64 to -1,-33, blocks -512,0,-1024 to -1,255,-513)
+	Level time: 279685 game time, 8274 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 38 total; [EntityClientPlayerMP['Player586'/1, l='MpServer', x=-4775.17, y=57.62, z=6427.87], EntityArrow['arrow'/19908, l='MpServer', x=-4803.06, y=56.00, z=6431.59], EntityArrow['arrow'/18437, l='MpServer', x=-4746.75, y=56.00, z=6486.00], EntityArrow['arrow'/19653, l='MpServer', x=-4803.09, y=56.00, z=6432.75], EntityArrow['arrow'/19142, l='MpServer', x=-4810.34, y=56.00, z=6431.66], EntityArrow['arrow'/20232, l='MpServer', x=-4791.75, y=56.03, z=6434.53], EntityArrow['arrow'/18575, l='MpServer', x=-4747.50, y=56.00, z=6485.50], EntityArrow['arrow'/18706, l='MpServer', x=-4741.72, y=56.00, z=6484.97], EntityArrow['arrow'/19155, l='MpServer', x=-4811.16, y=56.00, z=6431.06], EntityArrow['arrow'/20115, l='MpServer', x=-4789.88, y=56.03, z=6434.84], EntityArrow['arrow'/19348, l='MpServer', x=-4809.91, y=56.00, z=6431.28], EntityArrow['arrow'/19412, l='MpServer', x=-4806.78, y=56.00, z=6431.22], EntityArrow['arrow'/20310, l='MpServer', x=-4804.34, y=56.00, z=6430.50], EntityArrow['arrow'/20439, l='MpServer', x=-4805.72, y=56.00, z=6429.59], EntityArrow['arrow'/19738, l='MpServer', x=-4786.69, y=56.03, z=6436.38], EntityArrow['arrow'/18524, l='MpServer', x=-4746.47, y=56.00, z=6487.31], EntityArrow['arrow'/19485, l='MpServer', x=-4804.97, y=56.00, z=6430.53], EntityArrow['arrow'/20061, l='MpServer', x=-4794.34, y=56.00, z=6432.69], EntityArrow['arrow'/19551, l='MpServer', x=-4807.56, y=56.00, z=6428.13], EntityArrow['arrow'/20384, l='MpServer', x=-4803.84, y=56.00, z=6430.50], EntityArrow['arrow'/20324, l='MpServer', x=-4804.91, y=56.00, z=6430.31], EntityArrow['arrow'/19624, l='MpServer', x=-4804.22, y=56.00, z=6432.34], EntityArrow['arrow'/18413, l='MpServer', x=-4746.25, y=56.00, z=6488.66], EntityArrow['arrow'/19822, l='MpServer', x=-4804.09, y=56.00, z=6427.50], EntityArrow['arrow'/19247, l='MpServer', x=-4811.28, y=56.00, z=6431.16], EntityArrow['arrow'/19185, l='MpServer', x=-4809.56, y=56.00, z=6431.91], EntityArrow['arrow'/19506, l='MpServer', x=-4807.25, y=56.00, z=6428.69], EntityArrow['arrow'/18675, l='MpServer', x=-4740.78, y=56.00, z=6485.34], EntityArrow['arrow'/20531, l='MpServer', x=-4810.47, y=56.00, z=6428.31], EntityArrow['arrow'/20468, l='MpServer', x=-4809.22, y=56.00, z=6428.69], EntityItem['item.item.sulphur'/20405, l='MpServer', x=-4794.16, y=56.13, z=6431.69], EntityArrow['arrow'/19318, l='MpServer', x=-4809.75, y=56.00, z=6433.00], EntityArrow['arrow'/18615, l='MpServer', x=-4745.94, y=56.00, z=6484.34], EntityArrow['arrow'/19895, l='MpServer', x=-4799.97, y=56.00, z=6429.50], EntityArrow['arrow'/18492, l='MpServer', x=-4747.03, y=56.00, z=6487.28], EntityArrow['arrow'/19452, l='MpServer', x=-4805.53, y=56.00, z=6430.75], EntityArrow['arrow'/20029, l='MpServer', x=-4797.50, y=56.00, z=6430.41], EntityArrow['arrow'/19711, l='MpServer', x=-4786.31, y=56.03, z=6436.59]]
+	Retry entities: 0 total; []
+Stacktrace:
+	at net.minecraft.src.WorldClient.addWorldInfoToCrashReport(WorldClient.java:405)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2448)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:776)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.0.2
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_201, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 533929008 bytes (509 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 1119 (62664 bytes; 0 MB) allocated, 2 (112 bytes; 0 MB) used
+	Suspicious classes: Start[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	ModLoader: Mods loaded: 1
+ModLoader DNC v 1.0.2
+
+	LWJGL: 2.4.2
+	OpenGL: GeForce GTX 1080/PCIe/SSE2 GL version 4.6.0 NVIDIA 416.94, NVIDIA Corporation
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Texture Pack: Default
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 121 (6776 bytes; 0 MB) allocated, 32 (1792 bytes; 0 MB) used

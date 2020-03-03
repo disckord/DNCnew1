@@ -1,0 +1,51 @@
+---- Minecraft Crash Report ----
+// Ooh. Shiny.
+
+Time: 10/4/19 9:24 AM
+Description: Ticking memory connection
+
+java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Unknown Source)
+	at net.minecraft.src.ComponentVillagePathGen.addComponentParts(ComponentVillagePathGen.java:125)
+	at net.minecraft.src.StructureStart.generateStructure(StructureStart.java:34)
+	at net.minecraft.src.MapGenStructure.generateStructuresInChunk(MapGenStructure.java:64)
+	at net.minecraft.src.ChunkProviderFlat.populate(ChunkProviderFlat.java:171)
+	at net.minecraft.src.ChunkProviderServer.populate(ChunkProviderServer.java:233)
+	at net.minecraft.src.Chunk.populateChunk(Chunk.java:1134)
+	at net.minecraft.src.ChunkProviderServer.loadChunk(ChunkProviderServer.java:128)
+	at net.minecraft.src.PlayerInstance.<init>(PlayerInstance.java:25)
+	at net.minecraft.src.PlayerManager.getOrCreateChunkWatcher(PlayerManager.java:84)
+	at net.minecraft.src.PlayerManager.updateMountedMovingPlayer(PlayerManager.java:243)
+	at net.minecraft.src.ServerConfigurationManager.serverUpdateMountedMovingPlayer(ServerConfigurationManager.java:231)
+	at net.minecraft.src.NetServerHandler.handleFlying(NetServerHandler.java:324)
+	at net.minecraft.src.Packet10Flying.processPacket(Packet10Flying.java:48)
+	at net.minecraft.src.MemoryConnection.processReadPackets(MemoryConnection.java:74)
+	at net.minecraft.src.NetServerHandler.networkTick(NetServerHandler.java:70)
+	at net.minecraft.src.NetworkListenThread.networkTick(NetworkListenThread.java:48)
+	at net.minecraft.src.IntegratedServerListenThread.networkTick(IntegratedServerListenThread.java:99)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:660)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:563)
+	at net.minecraft.src.IntegratedServer.tick(IntegratedServer.java:179)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:473)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.1.5d
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 561543504 bytes (535 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 191 (10696 bytes; 0 MB) allocated, 139 (7784 bytes; 0 MB) used
+	Suspicious classes: Start, ModLoader, EntityRendererProxy[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.VersionWriter, SkinGetter], [org.apache.commons.io.IOUtils, Charsets], [org.apache.commons.io.output.StringBuilderWriter, ByteArrayOutputStream], [org.json.simple.JSONValue, JSONAware, JSONStreamAware, ...], [org.json.simple.parser.ParseException, JSONParser, Yylex, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 37 (2072 bytes; 0 MB) allocated, 21 (1176 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['disckord'/0, l='New World', x=-1733.94, y=16.26, z=-795.62]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

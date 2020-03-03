@@ -1,0 +1,70 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 8/11/19 5:20 PM
+Description: Unexpected error
+
+java.lang.ArrayIndexOutOfBoundsException: 2
+	at net.minecraft.src.WorldRenderer.updateRenderer(WorldRenderer.java:232)
+	at net.minecraft.src.RenderGlobal.updateRenderers(RenderGlobal.java:1446)
+	at net.minecraft.src.EntityRenderer.renderWorld(EntityRenderer.java:1118)
+	at net.minecraft.src.EntityRenderer.updateCameraAndRender(EntityRenderer.java:990)
+	at net.minecraft.src.EntityRendererProxy.updateCameraAndRender(EntityRendererProxy.java:20)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:865)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:753)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.src.WorldRenderer.updateRenderer(WorldRenderer.java:232)
+	at net.minecraft.src.RenderGlobal.updateRenderers(RenderGlobal.java:1446)
+	at net.minecraft.src.EntityRenderer.renderWorld(EntityRenderer.java:1118)
+	at net.minecraft.src.EntityRenderer.updateCameraAndRender(EntityRenderer.java:990)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['disckord'/268138, l='MpServer', x=442.45, y=65.62, z=-440.47]]
+	Chunk stats: MultiplayerChunkCache: 441
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (369,75,-353), Chunk: (at 1,4,15 in 23,-23; contains blocks 368,0,-368 to 383,255,-353), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 8737667 game time, 9131610 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 60 total; [EntityClientPlayerMP['disckord'/268138, l='MpServer', x=442.45, y=65.62, z=-440.47], EntitySkeleton['Skeleton'/269830, l='MpServer', x=459.31, y=51.81, z=-446.31], EntityChicken['Chicken'/268161, l='MpServer', x=424.19, y=65.00, z=-464.53], EntityZombie['Zombie'/272769, l='MpServer', x=371.31, y=19.00, z=-450.69], EntityZombie['Zombie'/273153, l='MpServer', x=512.50, y=40.00, z=-407.50], EntitySkeleton['Skeleton'/269832, l='MpServer', x=459.89, y=51.46, z=-446.30], EntityCreeper['Creeper'/271881, l='MpServer', x=420.53, y=23.00, z=-479.31], EntityZombie['Zombie'/272011, l='MpServer', x=410.44, y=21.00, z=-483.00], EntitySquid['Squid'/272404, l='MpServer', x=481.41, y=58.78, z=-391.16], EntityItem['item.item.dyePowder.black'/272401, l='MpServer', x=477.59, y=56.13, z=-424.19], EntitySquid['Squid'/272402, l='MpServer', x=466.53, y=61.78, z=-386.09], EntityZombie['Zombie'/271645, l='MpServer', x=472.00, y=13.00, z=-457.56], EntityZombie['Zombie'/272920, l='MpServer', x=372.50, y=19.00, z=-454.04], EntitySkeleton['Skeleton'/272922, l='MpServer', x=439.50, y=11.00, z=-469.79], EntitySquid['Squid'/272419, l='MpServer', x=505.38, y=56.88, z=-415.34], EntityCreeper['Creeper'/272815, l='MpServer', x=426.00, y=11.00, z=-446.41], EntityCreeper['Creeper'/273065, l='MpServer', x=418.50, y=22.00, z=-442.50], EntitySkeleton['Skeleton'/273067, l='MpServer', x=388.50, y=51.00, z=-474.50], EntityZombie['Zombie'/273206, l='MpServer', x=504.50, y=31.00, z=-453.50], EntityCreeper['Creeper'/272816, l='MpServer', x=450.50, y=11.00, z=-439.39], EntitySpider['Spider'/273202, l='MpServer', x=507.50, y=31.00, z=-451.50], EntitySkeleton['Skeleton'/273084, l='MpServer', x=379.50, y=20.00, z=-459.50], EntitySkeleton['Skeleton'/272574, l='MpServer', x=506.93, y=40.00, z=-400.50], EntityCreeper['Creeper'/272575, l='MpServer', x=511.83, y=38.92, z=-415.32], EntitySkeleton['Skeleton'/272831, l='MpServer', x=519.16, y=51.00, z=-458.38], EntitySkeleton['Skeleton'/271032, l='MpServer', x=514.16, y=40.00, z=-402.91], EntityZombie['Zombie'/273208, l='MpServer', x=506.50, y=31.00, z=-453.50], EntitySkeleton['Skeleton'/272832, l='MpServer', x=516.30, y=45.00, z=-470.70], EntityZombie['Zombie'/272833, l='MpServer', x=516.50, y=52.00, z=-455.50], EntityZombie['Zombie'/273217, l='MpServer', x=391.50, y=24.00, z=-442.50], EntityZombie['Zombie'/272588, l='MpServer', x=387.44, y=17.00, z=-457.00], EntitySkeleton['Skeleton'/272200, l='MpServer', x=512.56, y=26.00, z=-440.97], EntityCreeper['Creeper'/270806, l='MpServer', x=420.55, y=21.00, z=-434.78], EntityCreeper['Creeper'/273126, l='MpServer', x=512.70, y=38.00, z=-414.30], EntitySpider['Spider'/271207, l='MpServer', x=437.91, y=35.16, z=-430.00], EntityZombie['Zombie'/272999, l='MpServer', x=443.63, y=65.00, z=-512.99], EntityCreeper['Creeper'/273127, l='MpServer', x=511.45, y=38.00, z=-415.98], EntityCreeper['Creeper'/268140, l='MpServer', x=462.63, y=52.00, z=-448.69], EntitySkeleton['Skeleton'/268141, l='MpServer', x=461.56, y=52.00, z=-448.69], EntitySkeleton['Skeleton'/268142, l='MpServer', x=459.30, y=51.00, z=-446.30], EntitySkeleton['Skeleton'/268143, l='MpServer', x=460.52, y=51.00, z=-447.33], EntityZombie['Zombie'/273128, l='MpServer', x=518.50, y=46.00, z=-466.50], EntitySpider['Spider'/271220, l='MpServer', x=465.19, y=53.62, z=-445.13], EntityZombie['Zombie'/268149, l='MpServer', x=469.03, y=54.00, z=-444.41], EntityZombie['Zombie'/268150, l='MpServer', x=469.13, y=53.00, z=-441.55], EntityCreeper['Creeper'/271734, l='MpServer', x=412.00, y=21.00, z=-481.44], EntityZombie['Zombie'/268151, l='MpServer', x=460.31, y=52.00, z=-445.41], EntityZombie['Zombie'/268144, l='MpServer', x=432.97, y=35.06, z=-430.44], EntitySkeleton['Skeleton'/268145, l='MpServer', x=440.72, y=36.00, z=-431.47], EntitySkeleton['Skeleton'/268146, l='MpServer', x=436.22, y=35.10, z=-431.69], EntityZombie['Zombie'/268147, l='MpServer', x=441.09, y=36.00, z=-428.50], EntitySkeleton['Skeleton'/268156, l='MpServer', x=471.38, y=54.00, z=-439.78], EntitySkeleton['Skeleton'/268157, l='MpServer', x=468.50, y=55.00, z=-438.00], EntityCreeper['Creeper'/273021, l='MpServer', x=411.50, y=23.00, z=-455.50], EntitySkeleton['Skeleton'/268158, l='MpServer', x=458.31, y=52.00, z=-446.31], EntityZombie['Zombie'/272639, l='MpServer', x=477.38, y=14.00, z=-491.01], EntityCreeper['Creeper'/268152, l='MpServer', x=460.70, y=51.00, z=-446.10], EntitySkeleton['Skeleton'/268153, l='MpServer', x=459.30, y=51.00, z=-446.70], EntitySkeleton['Skeleton'/268154, l='MpServer', x=466.36, y=53.00, z=-446.32], EntitySkeleton['Skeleton'/268155, l='MpServer', x=462.38, y=52.00, z=-447.78]]
+	Retry entities: 0 total; []
+Stacktrace:
+	at net.minecraft.src.WorldClient.addWorldInfoToCrashReport(WorldClient.java:405)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2448)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:776)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.1.1
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 876112536 bytes (835 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 1032 (57792 bytes; 0 MB) allocated, 963 (53928 bytes; 0 MB) used
+	Suspicious classes: Start[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.SkinGetter], [org.apache.commons.io.IOUtils, Charsets], [org.apache.commons.io.output.StringBuilderWriter, ByteArrayOutputStream], [org.json.simple.JSONValue, JSONAware, JSONStreamAware, ...], [org.json.simple.parser.ParseException, JSONParser, Yylex, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	ModLoader: Mods loaded: 1
+ModLoader DNC v 1.1.1
+
+	LWJGL: 2.4.2
+	OpenGL: GeForce GTX 1080/PCIe/SSE2 GL version 4.6.0 NVIDIA 431.60, NVIDIA Corporation
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Texture Pack: Default
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 510 (28560 bytes; 0 MB) allocated, 487 (27272 bytes; 0 MB) used

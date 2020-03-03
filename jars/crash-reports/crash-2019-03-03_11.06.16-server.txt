@@ -1,0 +1,47 @@
+---- Minecraft Crash Report ----
+// Quite honestly, I wouldn't worry myself about that.
+
+Time: 3/3/19 11:06 AM
+Description: Exception in server tick loop
+
+java.lang.NullPointerException
+	at net.minecraft.src.WeightedRandom.getTotalWeight(WeightedRandom.java:76)
+	at net.minecraft.src.WeightedRandom.getRandomItem(WeightedRandom.java:117)
+	at net.minecraft.src.WeightedRandomChestContent.generateChestContents(WeightedRandomChestContent.java:39)
+	at net.minecraft.src.ComponentMineshaftCorridor.generateStructureChestContents(ComponentMineshaftCorridor.java:201)
+	at net.minecraft.src.ComponentMineshaftCorridor.addComponentParts(ComponentMineshaftCorridor.java:265)
+	at net.minecraft.src.StructureStart.generateStructure(StructureStart.java:34)
+	at net.minecraft.src.MapGenStructure.generateStructuresInChunk(MapGenStructure.java:64)
+	at net.minecraft.src.ChunkProviderFlat.populate(ChunkProviderFlat.java:171)
+	at net.minecraft.src.ChunkProviderServer.populate(ChunkProviderServer.java:233)
+	at net.minecraft.src.Chunk.populateChunk(Chunk.java:1138)
+	at net.minecraft.src.ChunkProviderServer.loadChunk(ChunkProviderServer.java:128)
+	at net.minecraft.server.MinecraftServer.initialWorldChunkLoad(MinecraftServer.java:294)
+	at net.minecraft.src.IntegratedServer.loadAllWorlds(IntegratedServer.java:87)
+	at net.minecraft.src.IntegratedServer.startServer(IntegratedServer.java:103)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:435)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v beta_1.7
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_201, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 764736744 bytes (729 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: Start[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	ModLoader: Mods loaded: 1
+ModLoader DNC v beta_1.7
+
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

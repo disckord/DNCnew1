@@ -1,0 +1,64 @@
+13:07:02 - !! Modified jar detected. Unpredictable results !!
+13:08:07 - 'runtime\bin\applydiff.exe -p1 -u -i ..\..\temp\temp.patch -d src\minecraft' failed : 1
+13:08:07 - 
+13:08:07 - == ERRORS FOUND ==
+13:08:07 - 
+13:08:07 - 1 out of 1 hunk ignored -- saving rejects to file 'net\minecraft\src\IntegratedSer#'
+13:08:07 - 2 out of 2 hunks FAILED -- saving rejects to file 'net\minecraft\src\RenderBlocks.#'
+13:08:07 - ==================
+13:08:07 - 
+18:02:20 - '"C:\Program Files\Java\jdk1.8.0_191\bin\javac" -Xlint:-options -deprecation -g -source 1.6 -target 1...' failed : 1
+18:02:20 - 
+18:02:20 - == ERRORS FOUND ==
+18:02:20 - 
+18:02:20 - src\minecraft\net\minecraft\util\SkinGetter.java:21: error: multi-catch statement is not supported in -source 1.6
+18:02:20 - 	        } catch (IOException | ParseException e) {
+18:02:20 - 	                             ^
+18:02:20 - 
+18:02:20 -   (use -source 7 or higher to enable multi-catch statement)
+18:02:20 - 1 error
+18:02:20 - ==================
+18:02:20 - 
+18:02:26 - '"C:\Program Files\Java\jdk1.8.0_191\bin\javac" -Xlint:-options -deprecation -g -source 1.6 -target 1...' failed : 1
+18:02:26 - 
+18:02:26 - == ERRORS FOUND ==
+18:02:26 - 
+18:02:26 - src\minecraft_server\net\minecraft\src\BanList.java:15: error: package net.minecraft.client does not exist
+18:02:26 - import net.minecraft.client.Minecraft;
+18:02:26 -                            ^
+18:02:26 - 
+18:02:26 - src\minecraft_server\net\minecraft\server\MinecraftServer.java:863: error: cannot find symbol
+18:02:26 -         return "DNC v " + Minecraft.gameversion;
+18:02:26 -                           ^
+18:02:26 - 
+18:02:26 -   symbol:   variable Minecraft
+18:02:26 -   location: class MinecraftServer
+18:02:26 - src\minecraft_server\net\minecraft\src\PlayerUsageSnooper.java:68: error: cannot find symbol
+18:02:26 -         this.addData("version", "DNC v " + Minecraft.gameversion);
+18:02:26 -                                            ^
+18:02:26 - 
+18:02:26 -   symbol:   variable Minecraft
+18:02:26 -   location: class PlayerUsageSnooper
+18:02:26 - src\minecraft_server\net\minecraft\src\BanList.java:149: error: cannot find symbol
+18:02:26 -                 var2.println("# Updated " + (new SimpleDateFormat()).format(new Date()) + " by Minecraft " + "DNC v " + Minecraft.gameversion);
+18:02:26 -                                                                                                                         ^
+18:02:26 - 
+18:02:26 -   symbol:   variable Minecraft
+18:02:26 -   location: class BanList
+18:02:26 - src\minecraft_server\net\minecraft\src\CallableMinecraftVersion.java:20: error: cannot find symbol
+18:02:26 -         return "DNC v " + Minecraft.gameversion;
+18:02:26 -                           ^
+18:02:26 - 
+18:02:26 -   symbol:   variable Minecraft
+18:02:26 -   location: class CallableMinecraftVersion
+18:02:26 - src\minecraft_server\net\minecraft\src\DedicatedServer.java:39: error: cannot find symbol
+18:02:26 -         this.getLogAgent().func_98233_a("Starting minecraft server version DNC v " + Minecraft.gameversion);
+18:02:26 -                                                                                      ^
+18:02:26 - 
+18:02:26 -   symbol:   variable Minecraft
+18:02:26 -   location: class DedicatedServer
+18:02:26 - 6 errors
+18:02:26 - ==================
+18:02:26 - 
+18:02:37 - !! Can not find client bins, try recompiling !!
+18:02:37 - !! Can not find server bins, try recompiling !!

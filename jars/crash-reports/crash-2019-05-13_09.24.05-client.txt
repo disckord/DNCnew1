@@ -1,0 +1,74 @@
+---- Minecraft Crash Report ----
+// Ooh. Shiny.
+
+Time: 5/13/19 9:24 AM
+Description: Unexpected error
+
+java.lang.IllegalStateException: Already tesselating!
+	at net.minecraft.src.Tessellator.startDrawing(Tessellator.java:312)
+	at net.minecraft.src.Tessellator.startDrawingQuads(Tessellator.java:302)
+	at net.minecraft.src.WorldRenderer.updateRenderer(WorldRenderer.java:180)
+	at net.minecraft.src.RenderGlobal.updateRenderers(RenderGlobal.java:1473)
+	at net.minecraft.src.EntityRenderer.renderWorld(EntityRenderer.java:1118)
+	at net.minecraft.src.EntityRenderer.updateCameraAndRender(EntityRenderer.java:990)
+	at net.minecraft.src.EntityRendererProxy.updateCameraAndRender(EntityRendererProxy.java:20)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:865)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:753)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.src.Tessellator.startDrawing(Tessellator.java:312)
+	at net.minecraft.src.Tessellator.startDrawingQuads(Tessellator.java:302)
+	at net.minecraft.src.WorldRenderer.updateRenderer(WorldRenderer.java:180)
+	at net.minecraft.src.RenderGlobal.updateRenderers(RenderGlobal.java:1473)
+	at net.minecraft.src.EntityRenderer.renderWorld(EntityRenderer.java:1118)
+	at net.minecraft.src.EntityRenderer.updateCameraAndRender(EntityRenderer.java:990)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player958'/155, l='MpServer', x=-188.84, y=68.62, z=100.40]]
+	Chunk stats: MultiplayerChunkCache: 441
+	Level seed: 0
+	Level generator: ID 12 - Beta, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (0,64,0), Chunk: (at 0,4,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 3675 game time, 3675 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 71 total; [EntitySkeleton['Skeleton'/6, l='MpServer', x=-190.09, y=36.00, z=33.53], EntityCreeper['Creeper'/391, l='MpServer', x=-185.50, y=26.00, z=40.94], EntityCreeper['Creeper'/392, l='MpServer', x=-182.06, y=32.00, z=58.41], EntityCreeper['Creeper'/905, l='MpServer', x=-175.70, y=12.05, z=74.70], EntitySheep['Sheep'/10, l='MpServer', x=-172.06, y=68.00, z=47.06], EntityZombie['Zombie'/13, l='MpServer', x=-187.53, y=35.00, z=28.97], EntityWolf['Wolf'/15, l='MpServer', x=-189.50, y=79.00, z=37.50], EntityCreeper['Creeper'/18, l='MpServer', x=-186.31, y=26.28, z=44.69], EntityCow['Cow'/20, l='MpServer', x=-168.19, y=67.00, z=59.13], EntityCow['Cow'/22, l='MpServer', x=-180.13, y=68.00, z=125.97], EntitySkeleton['Skeleton'/793, l='MpServer', x=-197.06, y=17.00, z=37.50], EntitySkeleton['Skeleton'/794, l='MpServer', x=-184.65, y=21.64, z=39.69], EntitySkeleton['Skeleton'/795, l='MpServer', x=-181.50, y=26.00, z=21.91], EntityZombie['Zombie'/668, l='MpServer', x=-240.26, y=18.00, z=58.37], EntityCreeper['Creeper'/799, l='MpServer', x=-161.50, y=16.00, z=65.50], EntityCreeper['Creeper'/32, l='MpServer', x=-177.84, y=40.00, z=68.89], EntityCow['Cow'/33, l='MpServer', x=-172.58, y=66.00, z=73.73], EntityZombie['Zombie'/801, l='MpServer', x=-178.64, y=40.00, z=70.77], EntityZombie['Zombie'/802, l='MpServer', x=-177.56, y=40.00, z=63.91], EntityZombie['Zombie'/803, l='MpServer', x=-171.66, y=42.00, z=71.16], EntitySpider['Spider'/932, l='MpServer', x=-182.82, y=20.00, z=40.13], EntitySkeleton['Skeleton'/933, l='MpServer', x=-190.03, y=19.00, z=32.50], EntityCreeper['Creeper'/38, l='MpServer', x=-145.00, y=17.00, z=48.53], EntitySkeleton['Skeleton'/934, l='MpServer', x=-177.59, y=15.53, z=36.43], EntitySheep['Sheep'/40, l='MpServer', x=-121.13, y=66.00, z=66.28], EntityCreeper['Creeper'/936, l='MpServer', x=-120.96, y=33.00, z=167.16], EntitySheep['Sheep'/41, l='MpServer', x=-125.61, y=68.00, z=74.32], EntitySheep['Sheep'/45, l='MpServer', x=-136.06, y=67.00, z=79.94], EntityCreeper['Creeper'/817, l='MpServer', x=-198.63, y=21.00, z=60.03], EntitySkeleton['Skeleton'/188, l='MpServer', x=-255.56, y=28.00, z=29.30], EntityCreeper['Creeper'/189, l='MpServer', x=-245.44, y=30.00, z=67.01], EntityCow['Cow'/193, l='MpServer', x=-244.90, y=63.45, z=141.97], EntitySkeleton['Skeleton'/201, l='MpServer', x=-231.06, y=56.00, z=85.50], EntityZombie['Zombie'/202, l='MpServer', x=-234.06, y=60.00, z=150.50], EntityCow['Cow'/203, l='MpServer', x=-212.81, y=64.00, z=175.81], EntityCow['Cow'/206, l='MpServer', x=-226.41, y=70.00, z=155.38], EntityZombie['Zombie'/846, l='MpServer', x=-172.64, y=41.00, z=30.78], EntityItem['item.item.feather'/1102, l='MpServer', x=-164.94, y=65.13, z=151.94], EntityItem['item.item.feather'/1103, l='MpServer', x=-165.84, y=65.13, z=152.25], EntitySkeleton['Skeleton'/208, l='MpServer', x=-220.09, y=50.00, z=27.28], EntitySkeleton['Skeleton'/976, l='MpServer', x=-155.88, y=19.00, z=63.50], EntityCreeper['Creeper'/468, l='MpServer', x=-227.00, y=43.00, z=36.44], EntitySkeleton['Skeleton'/214, l='MpServer', x=-230.06, y=12.00, z=70.47], EntityCreeper['Creeper'/470, l='MpServer', x=-196.59, y=55.00, z=33.00], EntitySpider['Spider'/982, l='MpServer', x=-167.36, y=19.17, z=39.92], EntityZombie['Zombie'/215, l='MpServer', x=-220.98, y=14.00, z=63.58], EntityCreeper['Creeper'/471, l='MpServer', x=-216.30, y=49.00, z=60.93], EntityCow['Cow'/216, l='MpServer', x=-216.72, y=67.00, z=47.47], EntityItem['item.tile.sapling.oak'/217, l='MpServer', x=-209.59, y=77.13, z=138.50], EntityCow['Cow'/218, l='MpServer', x=-228.81, y=69.00, z=156.91], EntityCreeper['Creeper'/859, l='MpServer', x=-222.47, y=43.00, z=40.00], EntityCreeper['Creeper'/1115, l='MpServer', x=-199.50, y=46.00, z=42.99], EntitySkeleton['Skeleton'/860, l='MpServer', x=-214.31, y=34.00, z=47.22], EntityCreeper['Creeper'/1116, l='MpServer', x=-198.93, y=46.00, z=41.25], EntitySkeleton['Skeleton'/861, l='MpServer', x=-213.22, y=38.00, z=43.63], EntityZombie['Zombie'/1117, l='MpServer', x=-199.50, y=44.00, z=50.50], EntityZombie['Zombie'/1118, l='MpServer', x=-194.24, y=45.00, z=51.23], EntityCreeper['Creeper'/225, l='MpServer', x=-213.34, y=33.05, z=22.00], EntityCreeper['Creeper'/229, l='MpServer', x=-188.50, y=44.00, z=35.06], EntitySkeleton['Skeleton'/231, l='MpServer', x=-197.84, y=38.00, z=34.75], EntitySkeleton['Skeleton'/234, l='MpServer', x=-181.19, y=43.00, z=63.59], EntityCreeper['Creeper'/235, l='MpServer', x=-206.41, y=37.00, z=31.94], EntitySkeleton['Skeleton'/237, l='MpServer', x=-201.50, y=46.00, z=42.94], EntitySheep['Sheep'/238, l='MpServer', x=-212.44, y=78.00, z=22.91], EntityCreeper['Creeper'/369, l='MpServer', x=-234.06, y=12.00, z=79.44], EntitySkeleton['Skeleton'/625, l='MpServer', x=-177.90, y=35.00, z=48.44], EntityZombie['Zombie'/882, l='MpServer', x=-223.63, y=46.22, z=33.21], EntityCow['Cow'/243, l='MpServer', x=-206.06, y=67.00, z=55.66], EntityClientPlayerMP['Player958'/155, l='MpServer', x=-188.84, y=68.62, z=100.40], EntityZombie['Zombie'/1017, l='MpServer', x=-225.50, y=30.00, z=42.50], EntitySpider['Spider'/1151, l='MpServer', x=-189.50, y=14.00, z=57.50]]
+	Retry entities: 0 total; []
+Stacktrace:
+	at net.minecraft.src.WorldClient.addWorldInfoToCrashReport(WorldClient.java:405)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2448)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:776)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.0.2
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_201, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 785607368 bytes (749 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 1057 (59192 bytes; 0 MB) allocated, 2 (112 bytes; 0 MB) used
+	Suspicious classes: Start[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	ModLoader: Mods loaded: 1
+ModLoader DNC v 1.0.2
+
+	LWJGL: 2.4.2
+	OpenGL: GeForce GTX 1080/PCIe/SSE2 GL version 4.6.0 NVIDIA 416.94, NVIDIA Corporation
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Texture Pack: Default
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 4236 (237216 bytes; 0 MB) allocated, 21 (1176 bytes; 0 MB) used

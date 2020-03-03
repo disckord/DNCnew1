@@ -1,0 +1,31 @@
+src\minecraft_server\net\minecraft\src\BanList.java:15: error: package net.minecraft.client does not exist
+import net.minecraft.client.Minecraft;
+                           ^
+src\minecraft_server\net\minecraft\server\MinecraftServer.java:863: error: cannot find symbol
+        return "DNC v " + Minecraft.gameversion;
+                          ^
+  symbol:   variable Minecraft
+  location: class MinecraftServer
+src\minecraft_server\net\minecraft\src\PlayerUsageSnooper.java:68: error: cannot find symbol
+        this.addData("version", "DNC v " + Minecraft.gameversion);
+                                           ^
+  symbol:   variable Minecraft
+  location: class PlayerUsageSnooper
+src\minecraft_server\net\minecraft\src\BanList.java:149: error: cannot find symbol
+                var2.println("# Updated " + (new SimpleDateFormat()).format(new Date()) + " by Minecraft " + "DNC v " + Minecraft.gameversion);
+                                                                                                                        ^
+  symbol:   variable Minecraft
+  location: class BanList
+src\minecraft_server\net\minecraft\src\CallableMinecraftVersion.java:20: error: cannot find symbol
+        return "DNC v " + Minecraft.gameversion;
+                          ^
+  symbol:   variable Minecraft
+  location: class CallableMinecraftVersion
+src\minecraft_server\net\minecraft\src\DedicatedServer.java:39: error: cannot find symbol
+        this.getLogAgent().func_98233_a("Starting minecraft server version DNC v " + Minecraft.gameversion);
+                                                                                     ^
+  symbol:   variable Minecraft
+  location: class DedicatedServer
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+6 errors

@@ -1,0 +1,98 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 3/1/19 3:40 PM
+Description: Ticking entity
+
+java.lang.NullPointerException
+	at net.minecraft.src.Chunk.addEntity(Chunk.java:798)
+	at net.minecraft.src.World.spawnEntityInWorld(World.java:1439)
+	at net.minecraft.src.EntityLiving.onDeathUpdate(EntityLiving.java:655)
+	at net.minecraft.src.EntityLiving.onEntityUpdate(EntityLiving.java:594)
+	at net.minecraft.src.Entity.onUpdate(Entity.java:391)
+	at net.minecraft.src.EntityLiving.onUpdate(EntityLiving.java:760)
+	at net.minecraft.src.EntityMob.onUpdate(EntityMob.java:33)
+	at net.minecraft.src.EntityZombie.onUpdate(EntityZombie.java:179)
+	at net.minecraft.src.EntityPigZombie.onUpdate(EntityPigZombie.java:41)
+	at net.minecraft.src.World.updateEntityWithOptionalForce(World.java:2137)
+	at net.minecraft.src.WorldServer.updateEntityWithOptionalForce(WorldServer.java:631)
+	at net.minecraft.src.World.updateEntity(World.java:2107)
+	at net.minecraft.src.World.updateEntities(World.java:1976)
+	at net.minecraft.src.WorldServer.updateEntities(WorldServer.java:463)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:637)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:560)
+	at net.minecraft.src.IntegratedServer.tick(IntegratedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:470)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.src.Chunk.addEntity(Chunk.java:798)
+	at net.minecraft.src.World.spawnEntityInWorld(World.java:1439)
+	at net.minecraft.src.EntityLiving.onDeathUpdate(EntityLiving.java:655)
+	at net.minecraft.src.EntityLiving.onEntityUpdate(EntityLiving.java:594)
+	at net.minecraft.src.Entity.onUpdate(Entity.java:391)
+	at net.minecraft.src.EntityLiving.onUpdate(EntityLiving.java:760)
+	at net.minecraft.src.EntityMob.onUpdate(EntityMob.java:33)
+	at net.minecraft.src.EntityZombie.onUpdate(EntityZombie.java:179)
+	at net.minecraft.src.EntityPigZombie.onUpdate(EntityPigZombie.java:41)
+	at net.minecraft.src.World.updateEntityWithOptionalForce(World.java:2137)
+	at net.minecraft.src.WorldServer.updateEntityWithOptionalForce(WorldServer.java:631)
+	at net.minecraft.src.World.updateEntity(World.java:2107)
+
+-- Entity being ticked --
+Details:
+	Entity Type: PigZombie (net.minecraft.src.EntityPigZombie)
+	Entity ID: 158873
+	Entity Name: Zombie Pigman
+	Entity's Exact location: -138.31, 56.00, -770.16
+	Entity's Block location: World: (-139,56,-771), Chunk: (at 5,3,13 in -9,-49; contains blocks -144,0,-784 to -129,255,-769), Region: (-1,-2; contains chunks -32,-64 to -1,-33, blocks -512,0,-1024 to -1,255,-513)
+	Entity's Momentum: 0.00, -0.08, 0.00
+Stacktrace:
+	at net.minecraft.src.World.updateEntities(World.java:1976)
+	at net.minecraft.src.WorldServer.updateEntities(WorldServer.java:463)
+
+-- Affected level --
+Details:
+	Level name: testworld
+	All players: 1 total; [EntityPlayerMP['Player23'/10056, l='testworld', x=-143.48, y=56.00, z=-770.67]]
+	Chunk stats: ServerChunkCache: 518 Drop: 0
+	Level seed: -5029836430175435188
+	Level generator: ID 01 - flat, ver 0. Features enabled: true
+	Level generator options: 2;7,3x1,52x24;2;
+	Level spawn location: World: (-134,4,-765), Chunk: (at 10,0,3 in -9,-48; contains blocks -144,0,-768 to -129,255,-753), Region: (-1,-2; contains chunks -32,-64 to -1,-33, blocks -512,0,-1024 to -1,255,-513)
+	Level time: 52218 game time, 35992 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 2985 (now: false), thunder time: 21632 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:637)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:560)
+	at net.minecraft.src.IntegratedServer.tick(IntegratedServer.java:125)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:470)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v beta_1.7
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_201, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 607752728 bytes (579 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 152 (8512 bytes; 0 MB) allocated, 67 (3752 bytes; 0 MB) used
+	Suspicious classes: Start[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	ModLoader: Mods loaded: 1
+ModLoader DNC v beta_1.7
+
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 22 (1232 bytes; 0 MB) allocated, 7 (392 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player23'/10056, l='testworld', x=-143.48, y=56.00, z=-770.67]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated

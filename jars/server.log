@@ -1,0 +1,33 @@
+2019-08-05 20:58:52 [INFO] Starting minecraft server version DNC v 1.0.3
+2019-08-05 20:58:52 [INFO] Loading properties
+2019-08-05 20:58:52 [INFO] Default game type: SURVIVAL
+2019-08-05 20:58:52 [INFO] Generating keypair
+2019-08-05 20:58:52 [INFO] Starting Minecraft server on *:25565
+2019-08-05 20:58:52 [WARNING] **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+2019-08-05 20:58:52 [WARNING] The server will make no attempt to authenticate usernames. Beware.
+2019-08-05 20:58:52 [WARNING] While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+2019-08-05 20:58:52 [WARNING] To change this, set "online-mode" to "true" in the server.properties file.
+2019-08-05 20:58:53 [WARNING] Failed to load operators list: java.io.FileNotFoundException: .\ops.txt (The system cannot find the file specified)
+2019-08-05 20:58:53 [WARNING] Failed to load white-list: java.io.FileNotFoundException: .\white-list.txt (The system cannot find the file specified)
+2019-08-05 20:58:53 [INFO] Preparing level "mcpworld"
+2019-08-05 20:58:53 [INFO] Preparing start region for level 0
+2019-08-05 20:58:54 [INFO] Preparing spawn area: 25%
+2019-08-05 20:58:55 [INFO] Preparing spawn area: 55%
+2019-08-05 20:58:56 [INFO] Preparing spawn area: 85%
+2019-08-05 20:58:56 [INFO] Done (3.777s)! For help, type "help" or "?"
+2019-08-05 20:59:11 [INFO] Disconnecting Player869 [/127.0.0.1:58874]: Outdated client!
+2019-08-05 20:59:11 [INFO] Player869 [/127.0.0.1:58874] lost connection
+2019-08-05 20:59:11 [INFO] Disconnecting Player869 [/127.0.0.1:58875]: Outdated client!
+2019-08-05 20:59:11 [INFO] Player869 [/127.0.0.1:58875] lost connection
+2019-08-05 20:59:13 [INFO] Disconnecting Player869 [/127.0.0.1:58876]: Outdated client!
+2019-08-05 20:59:24 [INFO] Disconnecting Player869 [/127.0.0.1:58880]: Outdated client!
+2019-08-05 20:59:40 [INFO] Disconnecting /127.0.0.1:58873: Took too long to log in
+2019-08-05 21:01:00 [INFO] Stopping server
+2019-08-05 21:01:00 [INFO] Saving players
+2019-08-05 21:01:00 [INFO] Saving worlds
+2019-08-05 21:01:00 [INFO] Closing listening thread
+2019-08-05 21:01:00 [INFO] Saving chunks for level 'mcpworld'/Overworld
+2019-08-05 21:01:00 [INFO] Saving chunks for level 'mcpworld'/Nether
+2019-08-05 21:01:00 [INFO] Saving chunks for level 'mcpworld'/The End
+2019-08-05 21:01:01 [INFO] Stopping server
+2019-08-05 21:01:01 [INFO] Saving players

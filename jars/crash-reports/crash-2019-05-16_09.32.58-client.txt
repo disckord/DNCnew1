@@ -1,0 +1,76 @@
+---- Minecraft Crash Report ----
+// Ooh. Shiny.
+
+Time: 5/16/19 9:32 AM
+Description: Unexpected error
+
+java.lang.ArrayIndexOutOfBoundsException: -112
+	at net.minecraft.src.ExtendedBlockStorage.getExtBlockID(ExtendedBlockStorage.java:61)
+	at net.minecraft.src.Chunk.getBlockID(Chunk.java:533)
+	at net.minecraft.src.ChunkCache.getBlockId(ChunkCache.java:84)
+	at net.minecraft.src.WorldRenderer.updateRenderer(WorldRenderer.java:168)
+	at net.minecraft.src.RenderGlobal.updateRenderers(RenderGlobal.java:1469)
+	at net.minecraft.src.EntityRenderer.renderWorld(EntityRenderer.java:1118)
+	at net.minecraft.src.EntityRenderer.updateCameraAndRender(EntityRenderer.java:990)
+	at net.minecraft.src.EntityRendererProxy.updateCameraAndRender(EntityRendererProxy.java:20)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:865)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:753)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.src.ExtendedBlockStorage.getExtBlockID(ExtendedBlockStorage.java:61)
+	at net.minecraft.src.Chunk.getBlockID(Chunk.java:533)
+	at net.minecraft.src.ChunkCache.getBlockId(ChunkCache.java:84)
+	at net.minecraft.src.WorldRenderer.updateRenderer(WorldRenderer.java:168)
+	at net.minecraft.src.RenderGlobal.updateRenderers(RenderGlobal.java:1469)
+	at net.minecraft.src.EntityRenderer.renderWorld(EntityRenderer.java:1118)
+	at net.minecraft.src.EntityRenderer.updateCameraAndRender(EntityRenderer.java:990)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player210'/1, l='MpServer', x=-11.16, y=57.62, z=-190.70]]
+	Chunk stats: MultiplayerChunkCache: 195
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-134,4,-765), Chunk: (at 10,0,3 in -9,-48; contains blocks -144,0,-768 to -129,255,-753), Region: (-1,-2; contains chunks -32,-64 to -1,-33, blocks -512,0,-1024 to -1,255,-513)
+	Level time: 308183 game time, 1387 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 1 total; [EntityClientPlayerMP['Player210'/1, l='MpServer', x=-11.16, y=57.62, z=-190.70]]
+	Retry entities: 0 total; []
+Stacktrace:
+	at net.minecraft.src.WorldClient.addWorldInfoToCrashReport(WorldClient.java:405)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2448)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:776)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.0.2
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_201, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 825011552 bytes (786 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 21443 (1200808 bytes; 1 MB) allocated, 2 (112 bytes; 0 MB) used
+	Suspicious classes: Start[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	ModLoader: Mods loaded: 1
+ModLoader DNC v 1.0.2
+
+	LWJGL: 2.4.2
+	OpenGL: GeForce GTX 1080/PCIe/SSE2 GL version 4.6.0 NVIDIA 416.94, NVIDIA Corporation
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Texture Pack: Default
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 31 (1736 bytes; 0 MB) allocated, 23 (1288 bytes; 0 MB) used

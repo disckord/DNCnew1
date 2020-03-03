@@ -1,0 +1,8 @@
+Sep 25, 2019 7:15:00 PM net.minecraft.src.ModLoader init
+FINE: ModLoader DNC v 1.1.3 Initializing...
+Sep 25, 2019 7:15:00 PM net.minecraft.src.ModLoader readFromClassPath
+FINER: Adding mods from C:\Users\Disckord\Desktop\DNCnew\eclipse\Client\bin
+Sep 25, 2019 7:15:00 PM net.minecraft.src.ModLoader readFromClassPath
+FINER: Directory found.
+Sep 25, 2019 7:15:00 PM net.minecraft.src.ModLoader addAllRenderers
+FINE: Initialized

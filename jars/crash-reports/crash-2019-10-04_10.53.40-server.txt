@@ -1,0 +1,41 @@
+---- Minecraft Crash Report ----
+// Ooh. Shiny.
+
+Time: 10/4/19 10:53 AM
+Description: Exception in server tick loop
+
+java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Unknown Source)
+	at net.minecraft.src.ComponentVillagePathGen.addComponentParts(ComponentVillagePathGen.java:132)
+	at net.minecraft.src.StructureStart.generateStructure(StructureStart.java:34)
+	at net.minecraft.src.MapGenStructure.generateStructuresInChunk(MapGenStructure.java:64)
+	at net.minecraft.src.ChunkProviderFlat.populate(ChunkProviderFlat.java:171)
+	at net.minecraft.src.ChunkProviderServer.populate(ChunkProviderServer.java:233)
+	at net.minecraft.src.Chunk.populateChunk(Chunk.java:1139)
+	at net.minecraft.src.ChunkProviderServer.loadChunk(ChunkProviderServer.java:128)
+	at net.minecraft.server.MinecraftServer.initialWorldChunkLoad(MinecraftServer.java:297)
+	at net.minecraft.src.IntegratedServer.loadAllWorlds(IntegratedServer.java:116)
+	at net.minecraft.src.IntegratedServer.startServer(IntegratedServer.java:144)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:438)
+	at net.minecraft.src.ThreadMinecraftServer.run(ThreadMinecraftServer.java:18)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: DNC v 1.1.5d
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_221, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 858869336 bytes (819 MB) / 1037959168 bytes (989 MB) up to 1037959168 bytes (989 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: Start, ModLoader, EntityRendererProxy[net.minecraft.src.IPlayerUsage, ILogAgent, MinecraftFakeLauncher, ...], [net.minecraft.util.VersionWriter]
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated
